@@ -46,7 +46,8 @@ html,body{overflow-x:hidden}
 .tbtn:hover{border-color:var(--rust)}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.5;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
-  padding-block:0 48px}
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
+body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:#102E47;z-index:50;pointer-events:none}
 .wrap{max-width:560px;margin:0 auto}
 button{font:inherit;color:inherit;cursor:pointer}
 :focus-visible{outline:3px solid var(--rust);outline-offset:2px}
